@@ -1,37 +1,37 @@
 const componentOptions = {
   cpu: [
     // AMD AM4
-    { name: "Ryzen 5 5600", price: 180, socket: "AM4", ramType: "DDR4" },
-    { name: "Ryzen 7 5800X3D", price: 320, socket: "AM4", ramType: "DDR4" },
+    { name: "Ryzen 5 5600", price: 100, socket: "AM4", ramType: "DDR4" },
+    { name: "Ryzen 7 5800X3D", price: 170, socket: "AM4", ramType: "DDR4" },
     // AMD AM5
-    { name: "Ryzen 5 7600", price: 250, socket: "AM5", ramType: "DDR5" },
+    { name: "Ryzen 5 7600", price: 200, socket: "AM5", ramType: "DDR5" },
     { name: "Ryzen 7 7800X3D", price: 400, socket: "AM5", ramType: "DDR5" },
     { name: "Ryzen 9 7950X", price: 550, socket: "AM5", ramType: "DDR5" },
     // Intel
-    { name: "Intel i5-13600K", price: 330, socket: "LGA1700", ramType: "DDR5" },
-    { name: "Intel i7-13700K", price: 420, socket: "LGA1700", ramType: "DDR5" },
+    { name: "Intel i5-14600K", price: 230, socket: "LGA1700", ramType: "DDR5" },
+    { name: "Intel i7-14700K", price: 420, socket: "LGA1700", ramType: "DDR5" },
     { name: "Intel i9-14900K", price: 600, socket: "LGA1700", ramType: "DDR5" },
   ],
 
   gpu: [
-    { name: "RTX 4060", price: 350, res: "1080p" },
-    { name: "RTX 4070 SUPER", price: 700, res: "1440p" },
-    { name: "RTX 5070", price: 750, res: "1440p" },
-    { name: "RTX 5070 Ti", price: 900, res: "4K" },
-    { name: "RX 7700XT", price: 400, res: "1080p" },
-    { name: "RX 7800XT", price: 550, res: "1440p" },
+    { name: "RTX 4060", price: 240, res: "1080p" },
+    { name: "RTX 4070 SUPER", price: 550, res: "1440p" },
+    { name: "RTX 5070", price: 600, res: "1440p" },
+    { name: "RTX 5070 Ti", price: 700, res: "4K" },
+    { name: "RX 7700XT", price: 300, res: "1080p" },
+    { name: "RX 7800XT", price: 450, res: "1440p" },
   ],
 
   motherboard: [
     // AM4
-    { name: "B550 TUF Gaming", price: 130, socket: "AM4", ramType: "DDR4" },
-    { name: "X570 AORUS Elite", price: 180, socket: "AM4", ramType: "DDR4" },
+    { name: "B550 TUF Gaming", price: 80, socket: "AM4", ramType: "DDR4" },
+    { name: "X570 AORUS Elite", price: 110, socket: "AM4", ramType: "DDR4" },
     // AM5
     { name: "B650-A ROG STRIX", price: 200, socket: "AM5", ramType: "DDR5" },
     { name: "X670E ROG STRIX", price: 250, socket: "AM5", ramType: "DDR5" },
     // Intel
-    { name: "Z690 Tomahawk", price: 200, socket: "LGA1700", ramType: "DDR5" },
-    { name: "Z790 AORUS Master", price: 300, socket: "LGA1700", ramType: "DDR5" },
+    { name: "Z690 Tomahawk", price: 220, socket: "LGA1700", ramType: "DDR5" },
+    { name: "Z790 AORUS Master", price: 280, socket: "LGA1700", ramType: "DDR5" },
   ],
 
   ram: [
@@ -44,12 +44,12 @@ const componentOptions = {
 
   ssd: [
     { name: "1TB NVMe Gen3", price: 60 },
-    { name: "2TB NVMe Gen4", price: 100 },
+    { name: "2TB NVMe Gen4", price: 110 },
     { name: "3TB NVMe Gen4", price: 160 },
   ],
 
   cooling: [
-    { name: "Air Cooler", price: 50 },
+    { name: "Air Cooler", price: 35 },
     { name: "AIO 240mm", price: 90 },
     { name: "AIO 360mm", price: 120 },
   ],
@@ -67,10 +67,11 @@ const componentOptions = {
   ],
 
   fans: [
+    
+    { name: "none", price: 0 },
     { name: "2x ARGB Fans", price: 40 },
     { name: "3x Silent Fans", price: 60 },
-    { name: "4x Premium Fans", price: 90 },
-    { name: "none", price: 0 },
+    { name: "4x Premium RGB Fans", price: 90 },
   ],
 };
 

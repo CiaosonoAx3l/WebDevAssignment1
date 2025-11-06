@@ -159,7 +159,8 @@ h1 {
 #answer {
   margin-top: 25px;
   font-size: 1.1em;
-  color: var(--text-color);
+  color: var(--accent-color);
+  font-weight: bold;
   opacity: 0;
   transition: opacity 0.5s ease;
   max-width: 700px;
