@@ -55,7 +55,7 @@ builds.forEach((build) => {
   buildCard.innerHTML = `
     <img src="${build.img}" alt="${build.name}">
     <h3>${build.name}</h3>
-    <table>
+    <table class="table">
       <tbody>
         ${build.components
           .map(
