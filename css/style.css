@@ -1,0 +1,188 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  --accent-color: #0071e3;
+  --card-bg-color: #f5f7fa;
+  --section-bg-color: #f2f2f7;
+}
+
+.light-mode {
+  --bg-color: #0f1116;
+  --text-color: #f5f5f5;
+  --accent-color: #00b0ff;
+  --card-bg-color: #1a1a1d;
+  --section-bg-color: #202124;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+  transition: background 0.4s;
+}
+
+.light-mode header {
+  background: rgba(18, 18, 18, 0.9);
+  border-bottom: 1px solid #333;
+}
+
+nav a {
+  color: var(--accent-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--text-color);
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/*Hero Section*/
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(to bottom right, var(--section-bg-color), var(--bg-color));
+}
+
+.hero h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+.cta {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
+/*Features Section*/
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 20px;
+  background-color: var(--bg-color);
+}
+
+.feature {
+  flex: 1 1 300px;
+  max-width: 350px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: var(--card-bg-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+/*FAQ Section*/
+.faq {
+  background: var(--section-bg-color);
+  text-align: center;
+  padding: 80px 20px;
+  transition: background 0.3s;
+}
+
+.faq h2 {
+  margin-bottom: 30px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-btn {
+  background-color: var(--accent-color);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.faq-btn:hover {
+  transform: scale(1.03);
+}
+
+#answer {
+  margin-top: 25px;
+  font-size: 1.1em;
+  color: var(--text-color);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Footer*/
+footer {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  text-align: center;
+  padding: 25px;
+}
+
+/*Animation*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,149 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #0071e3;
+  --card-bg-color: #f5f7fa;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --section-bg-color: #f2f2f7;
+}
+
+.light-mode {
+  --bg-color: #0f1116;
+  --text-color: #f5f5f5;
+  --accent-color: #00b0ff;
+  --card-bg-color: #1a1a1d;
+  --section-bg-color: #202124;
+  --header-bg: rgba(20, 20, 20, 0.9);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: var(--header-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+nav a {
+  color: var(--accent-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--text-color);
+}
+
+/* Example Builds */
+.example-builds {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.builds-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.build-card {
+  background: var(--card-bg-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 330px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.build-card:hover {
+  transform: translateY(-5px);
+}
+
+.build-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.build-card .price {
+  font-weight: 600;
+  margin-top: 10px;
+  color: var(--accent-color);
+}
+
+/* Build Generator */
+.build-generator {
+  text-align: center;
+  background: var(--section-bg-color);
+  padding: 70px 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.component label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95em;
+  outline: none;
+  background: var(--card-bg-color);
+  color: var(--text-color);
+  transition: border 0.2s;
+}
+
+select:focus {
+  border-color: var(--accent-color);
+}
+
+button {
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #005bb5;
+}
+
+.result-card {
+  margin-top: 40px;
+  background: var(--card-bg-color);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin-inline: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*IA GENERATED NOT GOOD AT ALL*/

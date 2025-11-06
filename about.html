@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About page</title>
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+  <header class="fade-in">
+    <h1>About the Website</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="data.html">Builds</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main class="about-container fade-in">
+    <section class="profile">
+      <img src="images/profile.jpg" alt="profile picture" class="profile-img" />
+      <div class="profile-text">
+        <h2>Hello! I'm Alessandro 👋</h2>
+        <p id="about-text"> <!--here will spawn some text--></p>
+      </div>
+    </section>
+
+    <section class="project-info fade-in">
+      <h3>About the Website</h3>
+      <p>
+        This website was created to help students and new builders learn how to design and understand custom Windows PCs.
+        The main goal is to provide a friendly and educational way to explore gaming and productivity builds.
+      </p>
+      <p>
+        The data used in this project comes from arrays written by me, featuring real life components such as Ryzen 7 7800X3D, RTX 4070, and others...
+        Each array simulates compatibility and price calculations using JavaScript.
+      </p>
+      <p>
+        The design inspiration and structure are based on other web projects developed by me (all of them are on my github).
+        The css is generated with tool as cssgridgenerator and using already-existing animations taken by coding.stella.
+        I designed the whole site myself starting with a draft of the 3 pages on my tablet's note, create a basic css that works and finally put it in an AI chatbot like Gemini to make the result more visually pleasant.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 PC Builder for Students — Made by Alessandro Mercede</p>
+  </footer>
+
+  <script src="js/toggle.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

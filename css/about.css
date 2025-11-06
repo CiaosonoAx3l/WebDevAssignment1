@@ -1,0 +1,139 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #0071e3;
+  --card-bg-color: #f5f7fa;
+  --section-bg-color: #f2f2f7;
+}
+
+.light-mode {
+  --bg-color: #0f1116;
+  --text-color: #f5f5f5;
+  --accent-color: #00b0ff;
+  --card-bg-color: #1a1a1d;
+  --section-bg-color: #202124;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s, color 0.4s;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+  transition: background 0.4s;
+}
+
+.light-mode header {
+  background: rgba(18, 18, 18, 0.9);
+  border-bottom: 1px solid #333;
+}
+
+nav a {
+  color: var(--accent-color);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--text-color);
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+  max-width: 900px;
+  margin-bottom: 60px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-text {
+  max-width: 600px;
+}
+
+.profile-text h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+
+.profile-text p {
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+/* Project Info */
+.project-info {
+  background: var(--section-bg-color);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 900px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-info h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  margin-top: 80px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  text-align: center;
+  padding: 25px;
+  font-size: 0.95em;
+}
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

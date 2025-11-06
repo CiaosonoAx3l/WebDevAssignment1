@@ -1,1 +1,64 @@
-Hello!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome page</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="fade-in">
+    <h1>PC Builder for Students</h1>
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="data.html">Builds</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="hero fade-in">
+    <h2>If you are a Student in search of a new PC, you are in the right place!</h2>
+    <p>
+      Made for university students who want the best balance between performance and price.
+      Whether you're coding, editing videos, or gaming between lectures, I'll help you find the ideal setup.
+    </p>
+    <a href="data.html" class="cta">Start Exploring</a>
+  </section>
+
+  <section class="features fade-in">
+    <div class="feature">
+      <h3>💻 Compare Builds</h3>
+      <p id="compare-text"></p>
+    </div>
+    <div class="feature">
+      <h3>⚙️ Create Your Own</h3>
+      <p id="create-text"></p>
+    </div>
+    <div class="feature">
+      <h3>🎯 Tailored for Students</h3>
+      <p id="tailor-text"></p>
+    </div>
+  </section>
+
+  <section class="faq fade-in">
+    <h2>Some Questions (click for reveling the answers)💡</h2>
+    <div class="faq-container">
+      <button class="faq-btn" data-question="ram">Are 8GB of RAM enough for the 2025?</button>
+      <button class="faq-btn" data-question="gpu">Do I need a dedicated GPU for university work?</button>
+      <button class="faq-btn" data-question="ssd">Is an SSD really necessary?</button>
+      <button class="faq-btn" data-question="budget">What is a good budget for a PC?</button>
+    </div>
+    <div id="answer"></div>
+  </section>
+
+  <footer class="fade-in">
+    <p>© 2025 PC Builder for Students — Made by Alessandro Mercede</p>
+  </footer>
+
+  <script src="js/toggle.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
