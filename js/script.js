@@ -14,7 +14,6 @@ fadeElems.forEach((el) => observer.observe(el));
 
 //typing effect
 
-
 function typeEffect(element, text, speed) 
 {
   if(speed == 0)

@@ -39,3 +39,7 @@ toggle.addEventListener("click", () => {
     localStorage.removeItem("theme");
   }
 });
+
+//date  
+
+document.getElementById('year').textContent = new Date().getFullYear();
