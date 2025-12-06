@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data-manipulation page(Handlebars Version)</title>
+  <link rel="stylesheet" href="css/data.css" />
+  </head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+  <header class="fade-in">
+    <h1>Watch & Create Builds</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="data.html">Builds</a>
+      <a href="dataHandlebars.html" class="active">Handlebars</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+    <main>
+        <!-- SECTION 1: Example Builds (Handlebars version) -->
+        <section class="example-builds fade-in">
+        <h2>Example Builds made by me</h2>
+        <p>Explore pre-designed PC builds optimized for gaming, streaming, and study. All built by me.</p>
+
+        <div id="builds-container" class="builds-grid"></div>
+        </section>
+    </main>
+
+  <footer>
+    <p>© <span id="year"></span> PC Builder for Students — Made by Alessandro Mercede</p>
+  </footer>
+
+  <script id="build-template" type="text/x-handlebars-template">
+  {{#each builds}}
+    <div class="build-card">
+      <img src="{{img}}" alt="{{name}}">
+      <h3>{{name}}</h3>
+
+      <table class="table">
+        <tbody>
+          {{#each components}}
+            <tr>
+              <th>{{type}}</th>
+              <td>{{name}}</td>
+              <td>€{{price}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      <p class="price">Total: €{{total components}}</p>
+    </div>
+  {{/each}}
+  </script>
+
+  <script>
+  // Custom helper for calculate the total
+  Handlebars.registerHelper("total", function(components) {
+    return components.reduce((sum, item) => sum + item.price, 0);
+  });
+
+  fetch("data/builds.json")
+    .then(res => res.json())
+    .then(data => {
+      //sort by date
+      data.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+      data.forEach(b => {
+        b.total = b.components.reduce((sum, c) => sum + c.price, 0);
+      });
+      const source = document.getElementById("build-template").innerHTML;
+      const template = Handlebars.compile(source);
+      const html = template({ builds: data });
+
+      document.getElementById("builds-container").innerHTML = html;
+    });
+  </script>
+
+
+
+  <script src="js/toggle.js"></script>
+</body>
+</html>
