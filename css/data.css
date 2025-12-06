@@ -172,3 +172,22 @@ footer {
   padding: 25px;
   font-size: 0.95em;
 }
+
+/*like button for dataHandlebars*/
+
+.like-btn {
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s;
+  color: #ff4d6d;
+}
+
+.like-btn.liked {
+  content: "♥";
+  color: #ff1b4a;
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+}
