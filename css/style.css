@@ -187,3 +187,10 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*compare*/
+.pc-compare {
+  max-width:600px; 
+  margin:30px auto;
+}
+

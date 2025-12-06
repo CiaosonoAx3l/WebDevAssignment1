@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome page</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="plugin/before-effect-slider.css">
+  <link rel="stylesheet" href="css/style.css" />  
 </head>
 
 <body>
@@ -24,6 +25,13 @@
       Made for university students who want the best balance between performance and price.
       Whether you're coding, editing videos, or gaming between lectures, I'll help you find the ideal setup.
     </p>
+    
+    <!-- slider -->
+    <div class="pc-compare">
+      <h1>Slide to reveal your new PC</h1>
+      <div id="images"></div>
+    </div>
+
     <a href="data.html" class="cta">Start Exploring</a>
   </section>
 
@@ -59,6 +67,21 @@
 
   <script src="js/toggle.js"></script>
   <script src="js/script.js"></script>
+  <script src="plugin/before-effect-slider.js"></script>
+  <script>
+  beforeEffectslider({
+    Selector: "#images",
+    BeforeImage: "images/PC_Old.jpg",   
+    AfterImage: "images/PC_New.jpg",    
+    DragFrom: 10,
+    ButtonsText: 
+    {
+      after: 'new PC',
+      before: 'old PC'
+    }
+  });
+  </script>
+
 </body>
 
 </html>
