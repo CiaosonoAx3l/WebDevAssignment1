@@ -1,3 +1,14 @@
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 :root {
   --bg-color: #fff;
   --text-color: #111;
@@ -65,10 +76,12 @@ h1 {
 }
 
 /*Hero Section*/
+
 .hero {
   text-align: center;
   padding: 120px 20px;
   background: linear-gradient(to bottom right, var(--section-bg-color), var(--bg-color));
+  animation: fadeUp 1.2s ease-out forwards; /*keyframe*/
 }
 
 .hero h2 {
@@ -189,9 +202,10 @@ footer {
   transform: translateY(0);
 }
 
-/*compare*/
+/*Compare*/
 .pc-compare {
   max-width:600px; 
   margin:30px auto;
 }
+
 
